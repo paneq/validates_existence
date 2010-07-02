@@ -57,7 +57,7 @@ First install the gem:
       validates :person,    :existence => { :allow_nil => true, :both => false }
 
       # the old method is supported also
-      validates_existence :wizard
+      validates_existence_of :wizard
     end
     
 ## I18N
