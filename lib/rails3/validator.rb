@@ -29,7 +29,7 @@ module Perfectline
             target_class = association.klass
           end
 
-          if target_class.nil? or !target_class.exists?(value)
+          if value.nil? or target_class.nil? or !target_class.exists?(value)
             record.errors.add(attribute, options[:message], :default => "does not exist")
 
             # add the error on both :relation and :relation_id
